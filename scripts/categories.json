@@ -1,0 +1,11 @@
+[
+  { "key": "blockchain", "label": "Blockchain" },
+  { "key": "control", "label": "Control" },
+  { "key": "mining", "label": "Mining" },
+  { "key": "network", "label": "Network" },
+  { "key": "rawtransactions", "label": "Raw Transactions" },
+  { "key": "signer", "label": "Signer" },
+  { "key": "util", "label": "Utilities" },
+  { "key": "wallet", "label": "Wallet" },
+  { "key": "zmq", "label": "ZMQ" }
+]

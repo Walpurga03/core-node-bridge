@@ -1,0 +1,14 @@
+:root {
+  --color-bg: #181a20;
+  --color-bg-gradient: linear-gradient(135deg, #23272f 0%, #181a20 100%);
+  --color-primary: #50fa7b;
+  --color-text: #f8f8f2;
+  --font-main: 'Inter', 'Fira Mono', 'Consolas', monospace;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg-gradient);
+  color: var(--color-text);
+  font-family: var(--font-main);
+}

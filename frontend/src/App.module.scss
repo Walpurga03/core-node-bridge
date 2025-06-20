@@ -1,0 +1,522 @@
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.98);}
+  to   { opacity: 1; transform: translateY(0) scale(1);}
+}
+
+.container {
+  min-height: 100vh;
+  background: var(--color-bg-gradient, linear-gradient(135deg, #23272f 0%, #181a20 100%));
+  color: var(--color-text, #f8f8f2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 3rem 1rem 2rem 1rem;
+  font-family: var(--font-main, 'Inter', 'Fira Mono', 'Consolas', monospace);
+  animation: fadeIn 1.2s cubic-bezier(.33,1.02,.54,.99);
+}
+
+h1 {
+  color: #50fa7b;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 16px #000a;
+  animation: fadeIn 1.2s 0.1s backwards;
+}
+
+.card {
+  background: #23243aee;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 32px #0007;
+  padding: 2.5rem 2rem;
+  margin: 1.5rem 0;
+  width: 100%;
+  max-width: 1200px;
+  border: 1.5px solid #44475a;
+  animation: fadeIn 1.2s 0.2s backwards;
+  transition: box-shadow 0.3s;
+  overflow-x: auto;
+  &:hover {
+    box-shadow: 0 8px 48px #000b;
+    border-color: #50fa7b88;
+  }
+}
+
+.button {
+  margin-top: 2rem;
+  padding: 0.8rem 2.2rem;
+  background: linear-gradient(90deg, #50fa7b 0%, #18e1d6 100%);
+  color: #181a20;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #18e1d633;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  animation: fadeIn 1.2s 0.4s backwards;
+  &:hover {
+    background: linear-gradient(90deg, #18e1d6 0%, #50fa7b 100%);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 24px #18e1d655;
+  }
+}
+
+.active { // Wird von .filterButton verwendet
+  background: #ffd600;
+  color: #222;
+  border-color: #ffd600;
+}
+
+.menuBig {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.bigButton {
+  font-size: 1.3rem;
+  padding: 1.5rem 2.5rem;
+  border-radius: 2rem;
+  border: none;
+  background: linear-gradient(90deg, #50fa7b 0%, #18e1d6 100%);
+  color: #181a20;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 24px #18e1d655;
+  transition: transform 0.15s, box-shadow 0.15s;
+  min-width: 220px;
+  margin: 0.5rem;
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 32px #18e1d6aa;
+  }
+}
+
+.backButton {
+  margin-bottom: 2rem;
+  background: none;
+  border: none;
+  color: #50fa7b;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: left;
+}
+
+.backButtonCenter {
+  margin-top: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.backButtonMargin {
+  margin-top: 2rem;
+}
+
+.langButton {
+  background: #23243a;
+  color: #50fa7b;
+  border: 2px solid #44475a;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  box-shadow: 0 2px 12px #0003;
+  outline: none;
+
+  &:hover, &:focus {
+    background: #50fa7b;
+    color: #181a20;
+    border-color: #50fa7b;
+  }
+}
+
+.bigButton:focus, .langButton:focus {
+  outline: 2px solid #18e1d6;
+  outline-offset: 2px;
+}
+
+.bigButton:active, .langButton:active {
+  transform: scale(0.97);
+}
+
+.description {
+  color: #a0a0a0;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  background: rgba(80, 250, 123, 0.05);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #50fa7b;
+}
+
+.descriptionMain {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  margin-top: 1rem;
+}
+
+// Terminal Styles
+.terminalFocusBox {
+  background: #181a20;
+  border: 2.5px solid #50fa7b;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 32px #18e1d655;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  margin: 2.5rem 0 2.5rem 0;
+  animation: fadeIn 0.7s;
+}
+
+.terminalForm {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  gap: 1rem;
+}
+.terminalPrompt {
+  color: #50fa7b;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  font-family: monospace;
+}
+.terminalInput {
+  background: #23243a;
+  color: #f8f8f2;
+  border: 2px solid #50fa7b;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.2rem;
+  width: 100%;
+  font-family: 'Fira Mono', monospace;
+  outline: none;
+  box-shadow: 0 2px 8px #18e1d633;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.terminalInput:focus {
+  border: 2px solid #18e1d6;
+  box-shadow: 0 0 0 2px #18e1d655;
+}
+
+.terminalOutput {
+  background: #23243a;
+  color: #f8f8f2;
+  border-radius: 8px;
+  padding: 1.2rem;
+  min-height: 60px;
+  font-family: 'Fira Mono', monospace;
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-x: auto;
+  margin-top: 1.5rem;
+  font-size: 1.13rem;
+  line-height: 1.6;
+  box-shadow: 0 2px 12px #18e1d633;
+  border: 1.5px solid #18e1d6;
+}
+
+.loading {
+  color: #50fa7b;
+}
+
+.terminalButton {
+  margin-left: 1rem;
+}
+
+// Param Table
+.paramTable {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-collapse: collapse;
+  font-size: 0.98rem;
+  background: #23243a;
+  color: #f8f8f2;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.paramTable th, .paramTable td {
+  border: 1px solid #44475a;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+.paramTable th {
+  background: #181a20;
+  color: #50fa7b;
+}
+
+// Beispiele-Container für RPC-Examples
+.examplesSection {
+  margin: 2.5rem 0 2rem 0;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, #232946 60%, #181a20 100%);
+  border-radius: 12px;
+  border-left: 4px solid #50fa7b;
+  box-shadow: 0 2px 12px #18e1d622;
+  animation: fadeIn 1.2s 0.2s backwards;
+}
+
+.examplesTitle {
+  color: #bd93f9;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &::before {
+    content: "💡";
+    font-size: 1.1em;
+    margin-right: 0.5em;
+  }
+}
+
+.examplesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.exampleItem {
+  background: #181a20;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 1px 6px #0002;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.08rem;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #232946;
+  }
+
+  code {
+    background: #282a36;
+    color: #50fa7b;
+    padding: 0.25em 0.7em;
+    border-radius: 6px;
+    font-size: 1.08em;
+    font-family: "Fira Mono", "Consolas", monospace;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 4px #0002;
+    white-space: pre;
+  }
+}
+
+// Responsive Anpassung
+@media (max-width: 600px) {
+  .examplesSection {
+    padding: 1rem 0.5rem;
+  }
+  .exampleItem {
+    padding: 0.7rem 0.5rem;
+    font-size: 0.98rem;
+  }
+}
+
+// Fehler-Styles
+.error {
+  color: #ff5555;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.langSwitcher {
+  text-align: right;
+  width: 100%;
+  max-width: 1200px;
+  padding-bottom: 1rem;
+}
+
+.noResults {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.buttonBar {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.commandTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #50fa7b;
+}
+
+.commandShort {
+  font-size: 1.15rem;
+  color: #a0a0a0;
+  margin-bottom: 1.2rem;
+}
+
+.moreInfoButton {
+  background: #232946;
+  color: #bd93f9;
+  border: 1.5px solid #bd93f9;
+  border-radius: 8px;
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background 0.2s, color 0.2s;
+  &:hover {
+    background: #bd93f9;
+    color: #232946;
+  }
+}
+
+.commandDetails {
+  background: #181a20;
+  color: #f8f8f2;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 16px #18e1d622;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden; // verhindert horizontales Scrollen
+  animation: fadeIn 0.5s;
+  word-break: break-word; // bricht lange Wörter um
+  hyphens: auto;
+
+  h1, h2, h3 {
+    margin-top: 1.2em;
+    margin-bottom: 0.6em;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+  }
+  h1 {
+    font-size: 2rem;
+    color: #50fa7b;
+    border-bottom: 2px solid #50fa7b44;
+    padding-bottom: 0.2em;
+  }
+  h2 {
+    font-size: 1.5rem;
+    color: #18e1d6;
+    border-left: 4px solid #18e1d6;
+    padding-left: 0.5em;
+    background: #23294633;
+  }
+  h3 {
+    font-size: 1.18rem;
+    color: #bd93f9;
+    border-left: 3px solid #bd93f9;
+    padding-left: 0.5em;
+    background: #23294622;
+  }
+  p {
+    margin: 0.7em 0 1.1em 0;
+    color: #e2e2e2;
+    font-size: 1.08rem;
+    line-height: 1.7;
+  }
+  ul, ol {
+    margin: 1em 0 1em 1.5em;
+    padding-left: 1.2em;
+  }
+  li {
+    margin-bottom: 0.5em;
+    font-size: 1.05rem;
+  }
+  code {
+    background: #282a36;
+    color: #50fa7b;
+    padding: 0.18em 0.5em;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: "Fira Mono", "Consolas", monospace;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    box-shadow: none;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  pre {
+    background: #232946;
+    color: #f8f8f2;
+    border-radius: 8px;
+    padding: 1em;
+    margin: 1em 0;
+    font-size: 1em;
+    overflow-x: auto;
+  }
+  a {
+    color: #18e1d6;
+    text-decoration: underline;
+    &:hover {
+      color: #50fa7b;
+    }
+  }
+  blockquote {
+    border-left: 4px solid #bd93f9;
+    background: #23294655;
+    margin: 1em 0;
+    padding: 0.7em 1em;
+    color: #bd93f9;
+    border-radius: 8px;
+    font-style: italic;
+  }
+}
+
+.examplesSectionSmall {
+  margin: 1.5rem 0 0.5rem 0;
+  padding: 1rem 1.2rem;
+  background: #232946;
+  border-radius: 10px;
+  border-left: 3px solid #bd93f9;
+  box-shadow: 0 1px 6px #18e1d622;
+  font-size: 0.98rem;
+  opacity: 0.85;
+}
+
+.examplesTitleSmall {
+  color: #bd93f9;
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.2px;
+}
+
+.exampleItemSmall {
+  background: none;
+  padding: 0.2rem 0.2rem;
+  font-size: 0.98rem;
+  code {
+    background: #282a36;
+    color: #bd93f9;
+    padding: 0.18em 0.5em;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: "Fira Mono", "Consolas", monospace;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    box-shadow: none;
+    white-space: pre;
+  }
+}

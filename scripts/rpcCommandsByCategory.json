@@ -1,0 +1,14 @@
+{
+  "blockchain": [
+    { "key": "getblockchaininfo" },
+    { "key": "getbestblockhash" },
+    { "key": "getblockcount" },
+    { "key": "getchainstates" },
+    { "key": "getchaintips" },
+    { "key": "getchaintxstats" },
+    { "key": "getblock" }
+  ],
+  "control": [
+    { "key": "getmemoryinfo" }
+  ]
+}

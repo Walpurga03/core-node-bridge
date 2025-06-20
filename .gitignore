@@ -1,0 +1,27 @@
+# Rust / Cargo
+# Das 'target'-Verzeichnis enthält alle Build-Artefakte und kann sehr groß werden.
+# Es sollte immer ignoriert werden.
+/target/
+
+# Node.js / npm
+# Ignoriert node_modules im Hauptverzeichnis UND im frontend-Verzeichnis
+/node_modules/
+/frontend/node_modules/
+/frontend/dist/
+
+# Umgebungs-Dateien
+# Diese Dateien enthalten sensible Daten wie Passwörter und sollten
+# NIEMALS in die Versionskontrolle eingecheckt werden.
+.env*
+!.env.example
+
+# IDE- und Editor-Konfigurationen
+.vscode/
+.idea/
+
+# Log-Dateien
+*.log
+
+# OS-spezifische Dateien
+.DS_Store
+Thumbs.db
