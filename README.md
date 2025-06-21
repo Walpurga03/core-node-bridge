@@ -82,16 +82,22 @@ Eine vollständige Beschreibung aller Bitcoin Core RPC-Kommandos findest du hier
 
 ## Screenshots
 
-*(Hier kannst du später Screenshots deiner App einfügen)*
+Hier sind einige Eindrücke von der Anwendung:
+
+**Hauptansicht mit Kategorien:**
+![Übersicht der RPC-Kategorien](docs/images/categories.png)
+
+**Detailansicht eines Befehls:**
+![Ausführen des getblockchaininfo Befehls](docs/images/getblockchaininfo.png)
 
 ---
 
 ## Lizenz
 
-MIT
+CC-BY-SA
 
 ---
 
 ## Mitwirken
 
-Pull Requests und Issues sind willkommen!  
+Pull Requests und Issues sind willkommen!
