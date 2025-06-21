@@ -39,11 +39,6 @@ export const enTranslations: TranslationSchema = {
     "title": "Categories",
     "implementedCommands": "Implemented: {{count}}"
   },
-  "filters": {
-    "all": "All",
-    "noParams": "0 Parameters",
-    "oneParam": "1 Parameter"
-  },
    "commands": {
     // Blockchain Commands
     "getblockchaininfo": {

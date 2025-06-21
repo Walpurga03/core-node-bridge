@@ -31,7 +31,7 @@ export const blockchainCommands = {
         "rpcVersion": "22.0.0",
         "complexity": "high"
       },
-      "title": "dumptxoutset",
+      "title": "UTXO-Set exportieren",
       "short": "Exportiert das aktuelle oder ein historisches UTXO-Set als Snapshot-Datei.",
       "examples": [
         "dumptxoutset utxo.dat",
@@ -47,7 +47,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.1.0",
         "complexity": "low"
       },
-      "title": "getbestblockhash",
+      "title": "Besten Block-Hash abrufen",
       "short": "Zeigt den Hash des neuesten Blocks (Spitzenblock) der aktuellen Blockchain.",
       "examples": [
         "getbestblockhash"
@@ -104,7 +104,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.6.0",
         "complexity": "medium"
       },
-      "title": "getblock",
+      "title": "Block-Informationen abrufen",
       "short": "Ruft detaillierte Informationen zu einem Block ab, identifiziert durch seinen Hash.",
       "examples": [
         "getblock 000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
@@ -117,10 +117,10 @@ export const blockchainCommands = {
       "meta": {
         "category": "blockchain",
         "params": [],
-        "rpcVersion": "0.9.0", 
+        "rpcVersion": "0.9.0",
         "complexity": "low"
       },
-      "title": "getblockchaininfo",
+      "title": "Blockchain-Informationen abrufen",
       "short": "Zeigt allgemeine Informationen zur aktuellen Blockchain, z.B. Blockhöhe, Chain, Pruning-Status und mehr.",
       "examples": [
         "getblockchaininfo"
@@ -134,7 +134,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.1.0",
         "complexity": "low"
       },
-      "title": "getblockcount",
+      "title": "Blockanzahl abrufen",
       "short": "Zeigt die aktuelle Blockhöhe der Blockchain an (Anzahl aller Blöcke ab Genesis-Block 0).",
       "examples": [
         "getblockcount"
@@ -173,7 +173,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.19.0",
         "complexity": "medium"
       },
-      "title": "getblockfilter",
+      "title": "Blockfilter abrufen",
       "short": "Liefert einen BIP 157 Blockfilter für einen bestimmten Block.",
       "examples": [
         "getblockfilter 000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
@@ -209,7 +209,7 @@ export const blockchainCommands = {
         "rpcVersion": "22.0.0",
         "complexity": "medium"
       },
-      "title": "getblockfrompeer",
+      "title": "Block von Peer anfordern",
       "short": "Fordert einen Block gezielt von einem bestimmten Peer an.",
       "examples": [
         "getblockfrompeer 00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09 0"
@@ -237,7 +237,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.6.0",
         "complexity": "low"
       },
-      "title": "getblockhash",
+      "title": "Block-Hash abrufen",
       "short": "Gibt den Block-Hash für eine bestimmte Block-Höhe zurück.",
       "examples": [
         "getblockhash 100000",
@@ -273,7 +273,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.12.0",
         "complexity": "low"
       },
-      "title": "getblockheader",
+      "title": "Block-Header abrufen",
       "short": "Liefert Informationen zum Header eines bestimmten Blocks.",
       "examples": [
         "getblockheader 00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09",
@@ -305,7 +305,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.17.0",
         "complexity": "medium"
       },
-      "title": "getblockstats",
+      "title": "Blockstatistiken abrufen",
       "short": "Berechnet Statistiken für einen bestimmten Block (nach Hash oder Höhe).",
       "examples": [
         "getblockstats 1000",
@@ -320,7 +320,7 @@ export const blockchainCommands = {
         "rpcVersion": "29.0.0",
         "complexity": "medium"
       },
-      "title": "getchainstates",
+      "title": "Blockketten-Zustände abrufen",
       "short": "Gibt Informationen über die verschiedenen Chainstates (alternative Blockketten-Zustände) zurück, die der Node verfolgt.",
       "examples": [
         "getchainstates"
@@ -334,7 +334,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.10.0",
         "complexity": "medium"
       },
-      "title": "getchaintips",
+      "title": "Kettenspitzen abrufen",
       "short": "Gibt Informationen über alle bekannten Spitzen (Tips) im Blockbaum zurück, einschließlich der Hauptkette und verwaister Zweige.",
       "examples": [
         "getchaintips"
@@ -369,7 +369,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.16.0",
         "complexity": "medium"
       },
-      "title": "getchaintxstats",
+      "title": "Blockketten-Transaktionsstatistiken abrufen",
       "short": "Berechnet Statistiken über die Gesamtzahl und Rate von Transaktionen in der Kette.",
       "examples": [
         "getchaintxstats",
@@ -398,7 +398,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.19.0",
         "complexity": "medium"
       },
-      "title": "getdeploymentinfo",
+      "title": "Konsens-Regeländerungen abrufen",
       "short": "Gibt Informationen zum Status von Konsens-Regeländerungen (Deployments) zurück.",
       "examples": [
         "getdeploymentinfo",
@@ -438,7 +438,7 @@ export const blockchainCommands = {
         "rpcVersion": "29.0.0",
         "complexity": "high"
       },
-      "title": "getdescriptoractivity",
+      "title": "Aktivität von Deskriptoren abrufen",
       "short": "Zeigt Sende- und Empfangsaktivität für eine Menge von Deskriptoren und Blöcken.",
       "examples": [
         "getdescriptoractivity '[\"000000000000000000001347062c12fded7c528943c8ce133987e2e2f5a840ee\"]' '[\"addr(bc1qzl6nsgqzu89a66l50cvwapnkw5shh23zarqkw9)\"]'",
@@ -453,7 +453,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.1.0",
         "complexity": "low"
       },
-      "title": "getdifficulty",
+      "title": "Block-Schwierigkeit abrufen",
       "short": "Gibt die aktuelle Proof-of-Work-Schwierigkeit als Vielfaches der minimalen Schwierigkeit zurück.",
       "examples": [
         "getdifficulty"
@@ -488,7 +488,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.13.0",
         "complexity": "medium"
       },
-      "title": "getmempoolancestors",
+      "title": "Vorgänger-Transaktionen im Mempool abrufen",
       "short": "Gibt alle Vorgänger-Transaktionen (Ancestors) einer Transaktion im Mempool zurück.",
       "examples": [
         "getmempoolancestors 4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b",
@@ -524,13 +524,13 @@ export const blockchainCommands = {
         "rpcVersion": "0.13.0",
         "complexity": "medium"
       },
-      "title": "getmempooldescendants",
+      "title": "Nachkommen-Transaktionen im Mempool abrufen",
       "short": "Gibt alle Nachkommen-Transaktionen (Descendants) einer Transaktion im Mempool zurück.",
       "examples": [
         "getmempooldescendants 4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b",
         "getmempooldescendants 4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b true"
       ],
-      "details": "### Was ist `getmempooldescendants`?\n\nStell dir eine Kette von unbestätigten Transaktionen vor. Wenn eine Transaktion (`Kind`) die Coins ausgibt, die eine andere Transaktion (`Eltern`) gerade erst empfangen hat, ist die Kind-Transaktion ein 'Nachkomme' oder 'Descendant'. Der Befehl `getmempooldescendants` findet alle diese Nachkommen für eine bestimmte Transaktion im Mempool.\n\n### Wofür wird es verwendet? (Was kann ich damit herausfinden?)\n\n*   **Analyse von Transaktionsketten:** Du kannst sehen, welche anderen unbestätigten Transaktionen von deiner Transaktion abhängen.\n*   **Child-Pays-For-Parent (CPFP) anwenden:** Wenn deine Transaktion eine zu niedrige Gebühr hat und 'feststeckt', kannst du eine Nachkommen-Transaktion mit einer sehr hohen Gebühr erstellen. Miner betrachten oft die Gesamtgebühr des Pakets (Eltern + Kind). Dieser Befehl hilft dir, die Kette zu sehen und die Gesamtgebühren (mit `verbose=true`) zu analysieren, um zu sehen, ob ein CPFP-Bump erfolgreich sein könnte.\n*   **Verständnis von Paket-Relay:** Verstehen, wie Transaktionspakete im Netzwerk weitergegeben werden.\n\n### Parameter\n1.  `txid` (String, **erforderlich**): Die ID der Transaktion, deren Nachkommen du finden möchtest. Sie muss sich im Mempool befinden.\n2.  `verbose` (Boolean, optional, Standard: `false`):\n    *   `false`: Gibt eine einfache Liste mit den IDs aller Nachkommen-Transaktionen zurück.\n    *   `true`: Gibt ein detailliertes JSON-Objekt für jeden Nachkommen zurück, mit Informationen zu Größe, Gebühren, Abhängigkeiten etc.\n\n### Was ist das Ergebnis?\n\n-   **Bei `verbose = false` (Standard):** Ein Array von Transaktions-IDs.\n    ```json\n    [\n      \"nachkomme_txid_1\",\n      \"nachkomme_txid_2\"\n    ]\n    ```\n\n-   **Bei `verbose = true`:** Ein Objekt, bei dem jede Nachkommen-TXID ein Schlüssel zu einem weiteren Objekt mit detaillierten Informationen ist.\n    ```json\n    {\n      \"nachkomme_txid_1\": {\n        \"vsize\": 150, // Virtuelle Größe der Transaktion\n        \"weight\": 600, // Transaktionsgewicht\n        \"time\": 1672531300, // Zeit, zu der sie in den Pool kam\n        \"height\": 800000, // Blockhöhe, als sie in den Pool kam\n        \"fees\": {\n          \"base\": 0.00008000, // Eigene Gebühr in BTC\n          \"descendant\": 0.00015000 // Gesamtgebühr aller Nachkommen (inkl. dieser)\n        },\n        \"depends\": [\"deine_txid\"], // Direkte Eltern-Transaktionen\n        \"spentby\": [\"noch_späterer_nachkomme_txid\"], // Direkte Kind-Transaktionen\n        \"unbroadcast\": false // Ob die Transaktion noch nicht an Peers gesendet wurde\n      }\n    }\n    ```\n\n### Wichtige Hinweise:\n*   Der Befehl funktioniert nur, wenn die angegebene `txid` im Mempool deines Nodes vorhanden ist.\n*   Ein \"Descendant\" ist jede Transaktion, die direkt oder indirekt von den Outputs der angegebenen Transaktion abhängt und ebenfalls noch unbestätigt ist.\n*   Das Feld `bip125-replaceable` ist veraltet und wird möglicherweise nicht mehr angezeigt.\n\n### Beispiele für die Kommandozeile:\n```bash\n# Einfache Liste der Nachkommen-IDs\nbitcoin-cli getmempooldescendants \"deine_txid\"\n\n# Detaillierte Informationen zu allen Nachkommen\nbitcoin-cli getmempooldescendants \"deine_txid\" true\n```\n```bash\n# Beispiel mit curl\ncurl --user deinBenutzer --data-binary '{\"jsonrpc\": \"2.0\", \"id\": \"curltest\", \"method\": \"getmempooldescendants\", \"params\": [\"deine_txid\", true]}' -H 'content-type: application/json' http://127.0.0.1:8332/\n```"
+      "details": "### Was ist `getmempooldescendants`?\n\nStell dir eine Kette von unbestätigten Transaktionen vor. Wenn eine Transaktion (`Kind`) die Coins ausgibt, die eine andere Transaktion (`Eltern`) gerade erst empfangen hat, ist die Kind-Transaktion ein 'Nachkomme' oder 'Descendant'. Der Befehl `getmempooldescendants` findet alle diese Nachkommen für eine bestimmte Transaktion im Mempool.\n\n### Wofür wird es verwendet? (Was kann ich damit herausfinden?)\n\n*   **Analyse von Transaktionsketten:** Du kannst sehen, welche anderen unbestätigten Transaktionen von deiner Transaktion abhängen.\n*   **Child-Pays-For-Parent (CPFP) anwenden:** Wenn deine Transaktion eine zu niedrige Gebühr hat und 'feststeckt', kannst du eine Nachkommen-Transaktion mit einer sehr hohen Gebühr erstellen. Miner betrachten oft die Gesamtgebühr des Pakets (Eltern + Kind). Dieser Befehl hilft dir, die Kette zu sehen und die Gesamtgebühren (mit `verbose=true`) zu analysieren, um zu sehen, ob ein CPFP-Bump erfolgreich sein könnte.\n*   **Verständnis von Paket-Relay:** Verstehen, wie Transaktionspakete im Netzwerk weitergegeben werden.\n\n### Parameter\n1.  `txid` (String, **erforderlich**): Die ID der Transaktion, deren Nachkommen du finden möchtest. Sie muss sich im Mempool befinden.\n2.  `verbose` (Boolean, optional, Standard: `false`):\n    *   `false`: Gibt eine einfache Liste mit den IDs aller Nachkommen-Transaktionen zurück.\n    *   `true`: Gibt ein detailliertes JSON-Objekt für jeden Nachkommen zurück, mit Informationen zu Größe, Gebühren, Abhängigkeiten etc.\n\n### Was ist das Ergebnis?\n\n-   **Bei `verbose = false` (Standard):** Ein Array von Transaktions-IDs.\n    ```json\n    [\n      \"nachkomme_txid_1\",\n      \"nachkomme_txid_2\"\n    ]\n    ```\n\n-   **Bei `verbose = true`:** Ein Objekt, bei dem jede Nachkommen-TXID ein Schlüssel zu einem weiteren Objekt mit detaillierten Informationen ist.\n    ```json\n    {\n      \"nachkomme_txid_1\": {\n        \"vsize\": 150, // Virtuelle Größe der Transaktion\n        \"weight\": 600, // Transaktionsgewicht\n        \"time\": 1672531300, // Zeit, zu der sie in den Pool kam\n        \"height\": 800000, // Blockhöhe, als sie in den Pool kam\n        \"fees\": {\n          \"base\": 0.00008000, // Eigene Gebühr in BTC\n          \"descendant\": 0.00015000 // Gesamtgebühr aller Nachkommen (inkl. dieser) mit Deltas, in BTC.\n        },\n        \"depends\": [\"deine_txid\"], // Direkte Eltern-Transaktionen\n        \"spentby\": [\"noch_späterer_nachkomme_txid\"], // Direkte Kind-Transaktionen\n        \"unbroadcast\": false // Ob die Transaktion noch nicht an Peers gesendet wurde\n      }\n    }\n    ```\n\n### Wichtige Hinweise:\n*   Der Befehl funktioniert nur, wenn die angegebene `txid` im Mempool deines Nodes vorhanden ist.\n*   Ein \"Descendant\" ist jede Transaktion, die direkt oder indirekt von den Outputs der angegebenen Transaktion abhängt und ebenfalls noch unbestätigt ist.\n*   Das Feld `bip125-replaceable` ist veraltet und wird möglicherweise nicht mehr angezeigt.\n\n### Beispiele für die Kommandozeile:\n```bash\n# Einfache Liste der Nachkommen-IDs\nbitcoin-cli getmempooldescendants \"deine_txid\"\n\n# Detaillierte Informationen zu allen Nachkommen\nbitcoin-cli getmempooldescendants \"deine_txid\" true\n```\n```bash\n# Beispiel mit curl\ncurl --user deinBenutzer --data-binary '{\"jsonrpc\": \"2.0\", \"id\": \"curltest\", \"method\": \"getmempooldescendants\", \"params\": [\"deine_txid\", true]}' -H 'content-type: application/json' http://127.0.0.1:8332/\n```"
     },
     "getmempoolentry": {
        "meta": {
@@ -552,7 +552,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.13.0",
         "complexity": "medium"
       },
-      "title": "getmempoolentry",
+      "title": "Mempool-Eintrag für eine Transaktion abrufen",
       "short": "Gibt detaillierte Mempool-Daten für eine bestimmte Transaktion zurück.",
       "examples": [
         "getmempoolentry 4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"
@@ -566,7 +566,7 @@ export const blockchainCommands = {
         "rpcVersion": "29.0.0",
         "complexity": "low"
       },
-      "title": "getmempoolinfo",
+      "title": "Mempool-Informationen abrufen",
       "short": "Gibt Details über den aktiven Zustand des Transaktions-Mempools zurück.",
       "examples": [
         "getmempoolinfo"
@@ -597,7 +597,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.7.0",
         "complexity": "medium"
       },
-      "title": "getrawmempool",
+      "title": "Aktuellen Mempool abrufen",
       "short": "Gibt alle Transaktionen im Mempool zurück, entweder als Liste von IDs oder als detailliertes Objekt.",
       "examples": [
         "getrawmempool",
@@ -645,7 +645,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.5.0",
         "complexity": "low"
       },
-      "title": "gettxout",
+      "title": "Details zu einem Transaktions-Output abrufen",
       "short": "Gibt Details zu einem nicht ausgegebenen Transaktions-Output (UTXO) zurück.",
       "examples": [
         "gettxout 4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b 1",
@@ -681,13 +681,13 @@ export const blockchainCommands = {
         "rpcVersion": "0.12.0",
         "complexity": "medium"
       },
-      "title": "gettxoutproof",
+      "title": "Merkle-Beweis für Transaktionen abrufen",
       "short": "Gibt einen hex-kodierten Beweis zurück, dass eine Transaktion in einem Block enthalten ist (Merkle-Beweis).",
       "examples": [
         "gettxoutproof '[\"txid1\",\"txid2\"]'",
         "gettxoutproof '[\"txid1\"]' \"00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09\""
       ],
-      "details": "### Was ist `gettxoutproof`?\n\nDieser Befehl liefert einen \"Merkle-Beweis\". Das ist ein kryptographischer Beweis, der zeigt, dass eine oder mehrere Transaktionen tatsächlich in einem bestimmten Block enthalten sind, ohne dass man den gesamten Block herunterladen muss. Dies ist ein Kernkonzept der Simplified Payment Verification (SPV).\n\n### Wofür wird es verwendet?\n\n*   **Für Light-Wallets (SPV):** Eine Light-Wallet kann diesen Beweis von einem Full Node anfordern, um zu verifizieren, dass eine für sie relevante Transaktion bestätigt wurde, ohne die gesamte Blockchain speichern zu müssen.\n*   **Nachweis gegenüber Dritten:** Du kannst diesen Beweis verwenden, um einer anderen Partei zu beweisen, dass eine Transaktion in einem Block enthalten ist.\n\n### Parameter\n1.  `txids` (Array von Strings, **erforderlich**): Eine Liste mit einer oder mehreren Transaktions-IDs, die in den Beweis aufgenommen werden sollen.\n2.  `blockhash` (String, optional): Wenn angegeben, wird der Beweis für diesen spezifischen Block erstellt. Wenn nicht angegeben, versucht der Node, den Block selbst zu finden.\n\n### Was ist das Ergebnis?\n\nEine einzelne, lange hexadezimal kodierte Zeichenkette. Diese Zeichenkette enthält die serialisierten Daten des Merkle-Beweises. Dieser Beweis kann mit dem Befehl `verifytxoutproof` überprüft werden.\n\n```\n\"01000000...\"\n```\n\n### Wichtige Hinweise\n*   **Funktioniert nicht immer standardmäßig:** Der Befehl funktioniert nur dann zuverlässig, wenn entweder:\n    1.  Dein Node mit der Option `-txindex=1` gestartet wurde (was einen vollständigen Transaktionsindex erstellt).\n    2.  Der optionale `blockhash`-Parameter angegeben wird, damit der Node weiß, wo er suchen muss.\n    3.  Für eine der angeforderten Transaktionen noch ein unspent Output (UTXO) im UTXO-Set des Nodes vorhanden ist.\n*   Wenn die Bedingungen nicht erfüllt sind, schlägt der Befehl fehl.\n\n### Beispiele für die Kommandozeile\n```bash\n# Beweis für zwei Transaktionen anfordern (benötigt -txindex oder UTXO)\nbitcoin-cli gettxoutproof '[\"txid_a\", \"txid_b\"]'\n\n# Beweis für eine Transaktion in einem bestimmten Block anfordern\nbitcoin-cli gettxoutproof '[\"txid_c\"]' \"der_blockhash\"\n```\n```bash\n# Beispiel mit curl\ncurl --user meinBenutzer --data-binary '{\"jsonrpc\": \"2.0\", \"id\": \"curltest\", \"method\": \"gettxoutproof\", \"params\": [[\"txid_a\"], \"der_blockhash\"]}' -H 'content-type: application/json' http://127.0.0.1:8332/\n```"
+      "details": "### Was ist `gettxoutproof`?\n\nDieser Befehl liefert einen \"Merkle-Beweis\". Das ist ein kryptographischer Beweis, der zeigt, dass eine oder mehrere Transaktionen tatsächlich in einem bestimmten Block enthalten sind, ohne dass man den gesamten Block herunterladen muss. Dies ist ein Kernkonzept der Simplified Payment Verification (SPV).\n\n### Wofür wird es verwendet?\n\n*   **Für Light-Wallets (SPV):** Eine Light-Wallet kann diesen Beweis von einem Full Node anfordern, um zu verifizieren, dass eine für sie relevante Transaktion bestätigt wurde, ohne die gesamte Blockchain speichern zu müssen.\n*   **Nachweis gegenüber Dritten:** Du kannst diesen Beweis verwenden, um einer anderen Partei zu beweisen, dass eine Transaktion in einem Block enthalten ist.\n\n### Parameter\n1.  `txids` (Array von Strings, **erforderlich**): Eine Liste mit einer oder mehreren Transaktions-IDs, die in den Beweis aufgenommen werden sollen.\n2.  `blockhash` (String, optional): Wenn angegeben, wird der Beweis für diesen spezifischen Block erstellt. Wenn nicht angegeben, versucht der Node, den Block selbst zu finden.\n\n### Was ist das Ergebnis?\n\nEine einzelne, lange hexadezimale Zeichenkette. Diese Zeichenkette enthält die serialisierten Daten des Merkle-Beweises. Dieser Beweis kann mit dem Befehl `verifytxoutproof` überprüft werden.\n\n```\n\"01000000...\"\n```\n\n### Wichtige Hinweise\n*   **Funktioniert nicht immer standardmäßig:** Der Befehl funktioniert nur dann zuverlässig, wenn entweder:\n    1.  Dein Node mit der Option `-txindex=1` gestartet wurde (was einen vollständigen Transaktionsindex erstellt).\n    2.  Der optionale `blockhash`-Parameter angegeben wird, damit der Node weiß, wo er suchen muss.\n    3.  Für eine der angeforderten Transaktionen noch ein unspent Output (UTXO) im UTXO-Set des Nodes vorhanden ist.\n*   Wenn die Bedingungen nicht erfüllt sind, schlägt der Befehl fehl.\n\n### Beispiele für die Kommandozeile\n```bash\n# Beweis für zwei Transaktionen anfordern (benötigt -txindex oder UTXO)\nbitcoin-cli gettxoutproof '[\"txid_a\", \"txid_b\"]'\n\n# Beweis für eine Transaktion in einem bestimmten Block anfordern\nbitcoin-cli gettxoutproof '[\"txid_c\"]' \"der_blockhash\"\n```\n```bash\n# Beispiel mit curl\ncurl --user meinBenutzer --data-binary '{\"jsonrpc\": \"2.0\", \"id\": \"curltest\", \"method\": \"gettxoutproof\", \"params\": [[\"txid_a\"], \"der_blockhash\"]}' -H 'content-type: application/json' http://127.0.0.1:8332/\n```"
     },
     "gettxoutsetinfo": {
       "meta": {
@@ -727,7 +727,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.21.0",
         "complexity": "medium"
       },
-      "title": "gettxoutsetinfo",
+      "title": "UTXO-Set-Statistiken abrufen",
       "short": "Gibt Statistiken über das UTXO-Set (alle nicht ausgegebenen Transaktions-Outputs) zurück.",
       "examples": [
         "gettxoutsetinfo",
@@ -752,7 +752,7 @@ export const blockchainCommands = {
         "rpcVersion": "24.0.0",
         "complexity": "medium"
       },
-      "title": "gettxspendingprevout",
+      "title": "UTXO-Prüfung im Mempool",
       "short": "Durchsucht den Mempool nach Transaktionen, die angegebene Outputs ausgeben.",
       "examples": [
         "gettxspendingprevout '[{\"txid\":\"a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0\",\"vout\":3}]'"
@@ -801,7 +801,7 @@ export const blockchainCommands = {
         "rpcVersion": "27.0",
         "complexity": "high"
       },
-      "title": "importmempool",
+      "title": "Importiere Mempool-Daten",
       "short": "Importiert eine mempool.dat-Datei und versucht, deren Inhalt zum Mempool hinzuzufügen.",
       "examples": [
         "importmempool /pfad/zu/mempool.dat",
@@ -825,7 +825,7 @@ export const blockchainCommands = {
         "rpcVersion": "22.0.0",
         "complexity": "high"
       },
-      "title": "loadtxoutset",
+      "title": "Lade UTXO-Snapshot",
       "short": "Lädt das serialisierte UTXO-Set aus einer Snapshot-Datei.",
       "examples": [
         "loadtxoutset utxo.dat"
@@ -852,7 +852,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.10.0",
         "complexity": "medium"
       },
-      "title": "preciousblock",
+      "title": "Bevorzugter Block",
       "short": "Behandelt einen Block so, als wäre er vor anderen Blöcken mit der gleichen Arbeit empfangen worden.",
       "examples": [
         "preciousblock 00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09"
@@ -878,7 +878,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.14.0",
         "complexity": "medium"
       },
-      "title": "pruneblockchain",
+      "title": "Blockchain kürzen",
       "short": "Kürzt die Blockchain, indem alte Blöcke von der Festplatte entfernt werden.",
       "examples": [
         "pruneblockchain 800000",
@@ -893,7 +893,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.16.0",
         "complexity": "low"
       },
-      "title": "savemempool",
+      "title": "Mempool speichern",
       "short": "Speichert den aktuellen Mempool auf der Festplatte.",
       "examples": [
         "savemempool"
@@ -969,7 +969,7 @@ export const blockchainCommands = {
         "rpcVersion": "22.0.0",
         "complexity": "high"
       },
-      "title": "scanblocks",
+      "title": "Scanne Blöcke",
       "short": "Durchsucht Blöcke nach relevanten Transaktionen für gegebene Deskriptoren (benötigt Blockfilterindex).",
       "examples": [
         "scanblocks start '[\"addr(bc1q...)\"]' 700000",
@@ -1007,7 +1007,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.17.0",
         "complexity": "high"
       },
-      "title": "scantxoutset",
+      "title": "Scanne UTXO-Set",
       "short": "Durchsucht das UTXO-Set nach Einträgen, die zu bestimmten Output-Deskriptoren passen.",
       "examples": [
         "scantxoutset start '[\"addr(bc1q...)\"]'",
@@ -1049,7 +1049,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.9.0",
         "complexity": "high"
       },
-      "title": "verifychain",
+      "title": "Blockchain-Integrität überprüfen",
       "short": "Überprüft die Integrität der Blockchain-Datenbank auf der Festplatte.",
       "examples": [
         "verifychain",
@@ -1074,7 +1074,7 @@ export const blockchainCommands = {
         "rpcVersion": "0.12.0",
         "complexity": "medium"
       },
-      "title": "verifytxoutproof",
+      "title": "UTXO-Beweis überprüfen",
       "short": "Überprüft einen Merkle-Beweis und gibt die darin bestätigten Transaktions-IDs zurück.",
       "examples": [
         "verifytxoutproof \"0100...\""

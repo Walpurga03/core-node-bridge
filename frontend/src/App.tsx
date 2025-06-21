@@ -158,6 +158,18 @@ function App() {
           return commandConfig?.meta?.params !== undefined;
         }).length;
 
+        const filteredCommands = categoryCommands.filter(filterByParams);
+
+        const groupCommandsByComplexity = (level: 'low' | 'medium' | 'high') =>
+          filteredCommands.filter(cmd => {
+            const config = t(`commands.${cmd.key}`, { returnObjects: true }) as any;
+            return config?.meta?.complexity === level;
+          });
+
+        const lowComplexityCommands = groupCommandsByComplexity('low');
+        const mediumComplexityCommands = groupCommandsByComplexity('medium');
+        const highComplexityCommands = groupCommandsByComplexity('high');
+
         return (
           <div className={appStyles.card}>
             <h2>{t(`categories.${view}`)}</h2>
@@ -168,19 +180,47 @@ function App() {
               {t("mainView.implementedCommands", { count: categoryImplementedCommands, defaultValue: "Davon implementiert: {{count}}" })}
             </div>
 
-            {categoryCommands.filter(filterByParams).length > 0 ? (
-              <div className={appStyles.menuBig} data-testid="command-menu"> {/* NEU: Test-ID hinzufügen */}
-                {categoryCommands
-                  .filter(filterByParams)
-                  .map(cmd => (
-                    <button
-                      key={cmd.key}
-                      className={appStyles.bigButton}
-                      onClick={() => setView(cmd.key)}
-                    >
-                      {t(`commands.${cmd.key}.title`)} {/* Hier wird der Titel verwendet */}
-                    </button>
-                  ))}
+            {filteredCommands.length > 0 ? (
+              <div>
+                {lowComplexityCommands.length > 0 && (
+                  <>
+                    <h3 className={appStyles.complexityHeader}>{t('complexity.low.title', 'Einfach')}</h3>
+                    <p className={appStyles.description}>{t('complexity.low.description')}</p>
+                    <div className={appStyles.menuBig} data-testid="command-menu-low">
+                      {lowComplexityCommands.map(cmd => (
+                        <button key={cmd.key} className={appStyles.bigButton} onClick={() => setView(cmd.key)}>
+                          {t(`commands.${cmd.key}.title`)}
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                )}
+                {mediumComplexityCommands.length > 0 && (
+                  <>
+                    <h3 className={appStyles.complexityHeader}>{t('complexity.medium.title', 'Mittel')}</h3>
+                    <p className={appStyles.description}>{t('complexity.medium.description')}</p>
+                    <div className={appStyles.menuBig} data-testid="command-menu-medium">
+                      {mediumComplexityCommands.map(cmd => (
+                        <button key={cmd.key} className={appStyles.bigButton} onClick={() => setView(cmd.key)}>
+                          {t(`commands.${cmd.key}.title`)}
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                )}
+                {highComplexityCommands.length > 0 && (
+                  <>
+                    <h3 className={appStyles.complexityHeader}>{t('complexity.high.title', 'Experten')}</h3>
+                    <p className={appStyles.description}>{t('complexity.high.description')}</p>
+                    <div className={appStyles.menuBig} data-testid="command-menu-high">
+                      {highComplexityCommands.map(cmd => (
+                        <button key={cmd.key} className={appStyles.bigButton} onClick={() => setView(cmd.key)}>
+                          {t(`commands.${cmd.key}.title`)}
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                )}
               </div>
             ) : (
               <p className={appStyles.description} style={{ textAlign: 'center', marginTop: '2rem' }}>
